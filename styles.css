@@ -1,0 +1,238 @@
+/**
+Palette: https://scrimba.com/links/hometown-palette
+RED: #E63946
+LIGHT: #F1FAEE
+AQUA: #A8DADC
+LIGHT BLUE: #457B9D
+DARK BLUE: #1D3557
+
+*/
+
+
+/* Reset and Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ===========================
+   HERO SECTION
+   =========================== */
+.hero-section {
+  position: relative;
+  height: 100px;
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/images/kwame.webp');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  text-align: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(206, 147, 33, 0.7),
+    rgba(0, 106, 78, 0.6)
+  );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  max-width: 800px;
+}
+
+.hero-title {
+  font-size: 5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.8;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1.2s ease-out;
+}
+
+
+
+
+/* ===========================
+   ACTIVITIES SECTION
+   =========================== */
+.activities-section {
+  padding: 100px 0;
+  background: linear-gradient(to bottom, #f9f9f9, #ffffff);
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #006a4e;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(to right, #ce9321, #dc143c);
+  margin: 20px auto 0;
+  border-radius: 2px;
+}
+
+.activities-grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.activity-card {
+  flex: 1;
+  min-width: 300px;
+  max-width: 380px;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.activity-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 12px 35px rgba(0, 106, 78, 0.25);
+}
+
+.activity-image-wrapper {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.activity-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.activity-card:hover .activity-image {
+  transform: scale(1.1);
+}
+
+.activity-content {
+  padding: 25px;
+}
+
+.activity-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ce9321;
+  margin-bottom: 15px;
+}
+
+.activity-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* ===========================
+   GUIDE SECTION
+   =========================== */
+.guide-section {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #006a4e 0%, #004d38 100%);
+}
+
+.guide-card {
+  background: white;
+  border-radius: 16px;
+  padding: 50px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  max-width: 900px;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+
+.guide-card:hover {
+  transform: translateY(-5px);
+}
+
+.guide-image-wrapper {
+  flex-shrink: 0;
+}
+
+.guide-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #ce9321;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.guide-content {
+  flex: 1;
+}
+
+.guide-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #006a4e;
+  margin-bottom: 8px;
+}
+
+.guide-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ce9321;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.guide-bio {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+}
